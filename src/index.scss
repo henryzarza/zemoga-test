@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@import './scss/normalize';
+@import './scss/typography';
+@import './scss/colors';
+@import './scss/variables';
+@import './scss/margins';
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
