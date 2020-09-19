@@ -16,6 +16,7 @@ i18next.addResources('en', 'HOME', {
   IN: '{{time}} in {{category}}',
   ADD_NAME: 'Is there anyone else you would want us to add?',
   SUBMIT_NAME: 'Submit Name',
+  THANKS: 'Thank you for voting!',
   MESSAGE_DESCRIPTION:
     'Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report.'
 });

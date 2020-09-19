@@ -46,38 +46,33 @@
   }
 }
 
-.input-radio {
-  display: none;
+.thumb-button {
+  background-color: $java;
+  border: 0.15rem solid $java;
+  cursor: pointer;
+  margin-right: 0.625rem;
+  padding: 0.45rem;
+  transition: border-color $transition-duration $transition-function;
 
-  & + label {
-    background-color: $java;
-    border: 0.15rem solid $java;
-    cursor: pointer;
-    margin-right: 0.625rem;
-    padding: 0.45rem;
-    transition: border-color $transition-duration $transition-function;
-
-    .thumb {
-      height: 1.125rem;
-      width: 1.125rem;
-    }
+  .thumb {
+    min-height: 1.125rem;
+    min-width: 1.125rem;
   }
 
-  &:last-of-type + label {
+  &.down {
     background-color: $my-sin;
     border-color: $my-sin;
   }
 
-  &:checked + label,
-  & + label:hover,
-  &:last-of-type + label:hover {
+  &.active,
+  &:hover {
     border-color: $white;
   }
 }
 
 .thumb {
-  height: 1.75rem;
-  width: 1.75rem;
+  min-height: 1.75rem;
+  min-width: 1.75rem;
 
   &.down {
     transform: rotate(180deg);
@@ -90,6 +85,8 @@
 
 .card-footer {
   display: flex;
+  --thumb-down: 0;
+  --thumb-up: 0;
   width: 100%;
 }
 
@@ -98,17 +95,19 @@
   align-items: center;
   display: flex;
   padding: 0.5rem 0.75rem;
+  transition: width $transition-duration $transition-function;
+  will-change: width;
 }
 
 .up-progress {
   background-color: rgba($java, 0.7);
-  width: 64%;
+  width: var(--thumb-up, 50%);
 }
 
 .down-progress {
   background-color: rgba($my-sin, 0.7);
   justify-content: flex-end;
-  width: 36%;
+  width: var(--thumb-down, 50%);
 }
 
 .title {
@@ -121,10 +120,13 @@
   left: -3.125rem;
   padding: 0.35rem;
   position: absolute;
-  transition: opacity $transition-duration $transition-function;
+
+  &.down {
+    background-color: $my-sin;
+  }
 
   .thumb {
-    height: 1.125rem;
-    width: 1.125rem;
+    min-height: 1.125rem;
+    min-width: 1.125rem;
   }
 }
