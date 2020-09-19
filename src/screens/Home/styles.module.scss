@@ -1,0 +1,111 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.vote-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2rem 0;
+  width: $content-width;
+}
+
+.message {
+  align-items: center;
+  background-color: $gallery;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  max-width: 19rem;
+}
+
+.time-icon {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+
+  path {
+    fill: $cod-gray;
+    transition: fill $transition-duration $transition-function;
+  }
+
+  &:hover path {
+    fill: $java;
+  }
+}
+
+.msg-paragragh {
+  max-width: 100%;
+  width: 45.625rem;
+}
+
+.card-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.banner {
+  align-items: center;
+  background: $dusty-gray url('../../assets/crowd.png') 100% / cover no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.25rem 1.875rem;
+  position: relative;
+
+  &::before {
+    background-color: rgba($white, 0.85);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  & > * {
+    z-index: 1;
+  }
+}
+
+.button {
+  align-items: center;
+  border: 0.2rem solid $black;
+  display: flex;
+  height: 3.25rem;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 0.125rem;
+  transition: background-color $transition-duration $transition-function;
+  width: 13rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($black, 0.25);
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  .message {
+    flex-wrap: wrap;
+  }
+
+  .msg-paragragh {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 90%;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}

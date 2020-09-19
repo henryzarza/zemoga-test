@@ -1,0 +1,130 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.card {
+  background-image: linear-gradient(0deg, rgba($black, 0.6) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  height: 34.375rem;
+  position: relative;
+  width: 100%;
+}
+
+.person-photo {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.8125rem 3.125rem;
+}
+
+.bottom-content {
+  align-items: center;
+  display: flex;
+}
+
+.button {
+  background-color: rgba($black, 0.15);
+  border: 0.1rem solid $white;
+  padding: 0.7rem 1.25rem;
+  transition: background-color $transition-duration $transition-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($black, 0.75);
+  }
+}
+
+.input-radio {
+  display: none;
+
+  & + label {
+    background-color: $java;
+    border: 0.15rem solid $java;
+    cursor: pointer;
+    margin-right: 0.625rem;
+    padding: 0.45rem;
+    transition: border-color $transition-duration $transition-function;
+
+    .thumb {
+      height: 1.125rem;
+      width: 1.125rem;
+    }
+  }
+
+  &:last-of-type + label {
+    background-color: $my-sin;
+    border-color: $my-sin;
+  }
+
+  &:checked + label,
+  & + label:hover,
+  &:last-of-type + label:hover {
+    border-color: $white;
+  }
+}
+
+.thumb {
+  height: 1.75rem;
+  width: 1.75rem;
+
+  &.down {
+    transform: rotate(180deg);
+  }
+
+  path {
+    fill: $white;
+  }
+}
+
+.card-footer {
+  display: flex;
+  width: 100%;
+}
+
+.up-progress,
+.down-progress {
+  align-items: center;
+  display: flex;
+  padding: 0.5rem 0.75rem;
+}
+
+.up-progress {
+  background-color: rgba($java, 0.7);
+  width: 64%;
+}
+
+.down-progress {
+  background-color: rgba($my-sin, 0.7);
+  justify-content: flex-end;
+  width: 36%;
+}
+
+.title {
+  position: relative;
+}
+
+.rated {
+  background-color: $java;
+  bottom: 0.5rem;
+  left: -3.125rem;
+  padding: 0.35rem;
+  position: absolute;
+  transition: opacity $transition-duration $transition-function;
+
+  .thumb {
+    height: 1.125rem;
+    width: 1.125rem;
+  }
+}

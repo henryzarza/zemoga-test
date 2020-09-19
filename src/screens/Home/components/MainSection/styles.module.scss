@@ -93,6 +93,10 @@
 .thumb {
   height: 2.25rem;
   width: 2.25rem;
+
+  path {
+    fill: $white;
+  }
 }
 
 .card-footer {
