@@ -1,14 +1,17 @@
 import React from 'react';
-import i18next from 'i18next';
 
-import styles from './styles.module.scss';
+import MainSection from './components/MainSection';
 
 function Home() {
   return (
-    <div className={styles.app}>
-      <div className={styles.test} />
-      <h1 className='title m-bottom-4'>{i18next.t('HOME:TITLE')}</h1>
-    </div>
+    <>
+      <MainSection />
+      <p className='base-text'>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem tempore ea ipsum eligendi
+        itaque laborum, quo nostrum vero quisquam officia veniam earum autem placeat at hic corporis
+        corrupti nesciunt alias.
+      </p>
+    </>
   );
 }
 
