@@ -1,0 +1,132 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.card {
+  background-image: linear-gradient(0deg, rgba($black, 0.6) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  height: 34.375rem;
+  position: relative;
+  width: 100%;
+}
+
+.person-photo {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.8125rem 3.125rem;
+}
+
+.bottom-content {
+  align-items: center;
+  display: flex;
+}
+
+.button {
+  background-color: rgba($black, 0.15);
+  border: 0.1rem solid $white;
+  padding: 0.7rem 1.25rem;
+  transition: background-color $transition-duration $transition-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($black, 0.75);
+  }
+}
+
+.thumb-button {
+  background-color: $java;
+  border: 0.15rem solid $java;
+  cursor: pointer;
+  margin-right: 0.625rem;
+  padding: 0.45rem;
+  transition: border-color $transition-duration $transition-function;
+
+  .thumb {
+    min-height: 1.125rem;
+    min-width: 1.125rem;
+  }
+
+  &.down {
+    background-color: $my-sin;
+    border-color: $my-sin;
+  }
+
+  &.active,
+  &:hover {
+    border-color: $white;
+  }
+}
+
+.thumb {
+  min-height: 1.75rem;
+  min-width: 1.75rem;
+
+  &.down {
+    transform: rotate(180deg);
+  }
+
+  path {
+    fill: $white;
+  }
+}
+
+.card-footer {
+  display: flex;
+  --thumb-down: 0;
+  --thumb-up: 0;
+  width: 100%;
+}
+
+.up-progress,
+.down-progress {
+  align-items: center;
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  transition: width $transition-duration $transition-function;
+  will-change: width;
+}
+
+.up-progress {
+  background-color: rgba($java, 0.7);
+  width: var(--thumb-up, 50%);
+}
+
+.down-progress {
+  background-color: rgba($my-sin, 0.7);
+  justify-content: flex-end;
+  width: var(--thumb-down, 50%);
+}
+
+.title {
+  position: relative;
+}
+
+.rated {
+  background-color: $java;
+  bottom: 0.5rem;
+  left: -3.125rem;
+  padding: 0.35rem;
+  position: absolute;
+
+  &.down {
+    background-color: $my-sin;
+  }
+
+  .thumb {
+    min-height: 1.125rem;
+    min-width: 1.125rem;
+  }
+}

@@ -11,16 +11,40 @@
   @include base-text(3.75rem, 3.75rem);
 }
 
+.highlight-title {
+  color: $cod-gray;
+  font-weight: 400;
+  @include base-text(2.8125rem, 3rem);
+}
+
+.medium-title {
+  color: $cod-gray;
+  font-weight: 300;
+  @include base-text(2.5rem, 3rem);
+}
+
+.medium-bold-title {
+  color: $cod-gray;
+  font-weight: 700;
+  @include base-text(2.25rem, 2.625rem);
+}
+
 .small-title {
   color: $cod-gray;
   font-weight: 400;
   @include base-text(2rem, 2.375rem);
 }
 
+.big-thin-text {
+  color: $cod-gray;
+  font-weight: 300;
+  @include base-text(1.875rem, 2.25rem);
+}
+
 .big-text {
   color: $cod-gray;
   font-weight: 400;
-  @include base-text(1.3125rem, 1.5rem);
+  @include base-text(1.35rem, 1.5rem);
 }
 
 .big-bold-text {
@@ -67,6 +91,7 @@
 }
 
 @media screen and (max-width: 40rem) {
+  // TODO add responsive for all fonts
   .title {
     @include base-text(2.2rem, 1);
   }
