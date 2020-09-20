@@ -16,11 +16,6 @@ function Input({
 }) {
   return (
     <div className={styles.container}>
-      {label && (
-        <label className='small-text' htmlFor={id}>
-          {label}
-        </label>
-      )}
       <input
         placeholder={placeholder}
         type={type}
@@ -34,6 +29,11 @@ function Input({
         ref={register(validationSchema)}
         onChange={onChange}
       />
+      {label && (
+        <label className='small-text fw-bold' htmlFor={id}>
+          {label}
+        </label>
+      )}
       {errors && (
         <small className={`small-text fw-bold white-color ${styles.error}`}>{errors.message}</small>
       )}
