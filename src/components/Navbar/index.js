@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import i18next from 'i18next';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Modal from '../Modal';
 import Login from '../../screens/Login';
@@ -15,18 +15,22 @@ function Navbar() {
     <>
       <nav className={styles.navbar}>
         <div className={styles.innerContent}>
-          <Link className={`small-title white-color m-right-2 ${styles.mainLink}`} to={ROUTES.HOME}>
+          <NavLink
+            className={`small-title white-color m-right-2 ${styles.mainLink}`}
+            to={ROUTES.HOME}
+          >
             {i18next.t('HOME:NAV')}
-          </Link>
+          </NavLink>
           <div className={styles.links}>
             {NAVBAR_ROUTES.map((el) => (
-              <Link
+              <NavLink
                 key={el.route}
                 className={`base-text fw-thin white-color m-right-10 ${styles.link}`}
                 to={el.route}
+                activeClassName='fw-bold'
               >
                 {i18next.t(el.text)}
-              </Link>
+              </NavLink>
             ))}
             <button
               type='button'

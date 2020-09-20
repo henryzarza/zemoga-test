@@ -1,0 +1,32 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 6rem 0;
+  width: $content-width;
+}
+
+.inner-content {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 27.5rem;
+}
+
+.button {
+  align-items: center;
+  background-color: rgba($java, 0.65);
+  border: 0.15rem solid $java;
+  display: flex;
+  height: 3.75rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  transition: background-color $transition-duration $transition-function;
+  width: 13rem;
+
+  &:hover {
+    background-color: $java;
+  }
+}

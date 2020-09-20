@@ -9,6 +9,7 @@ import Footer from '@components/Footer';
 const Home = lazy(() => import('./Home'));
 const HowItWorks = lazy(() => import('./HowItWorks'));
 const PastTrials = lazy(() => import('./PastTrials'));
+const SignUp = lazy(() => import('./SignUp'));
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path={ROUTES.PAST_TRIALS}>
               <PastTrials />
+            </Route>
+            <Route path={ROUTES.SIGN_UP}>
+              <SignUp />
             </Route>
           </Switch>
           <Footer />
