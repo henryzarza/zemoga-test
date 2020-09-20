@@ -23,3 +23,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
+
+## Know issues
+
+I didn't have time to solve these problems 😔😩
+
+- When you click in the link of `Join us now!` in the modal of Log In, the modal should close but it doesn't happen.
+- I have a problem with the custom validation in the field of `Password repeat` in SignUp screen, it seems the problem is with `react-hook-form` library.
+- The navbar in responsive it doesn't visible, I wanted to do something like menu hamburger but again I didn't have enough time.
+- The design of `Log In` and `Sign Up` screens are diferrent to the original design, I didn't have time to do it equal but I didn't want to lose the opportunity to show a small interaction with forms 🤓
