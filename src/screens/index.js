@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { ROUTES, NAVBAR_ROUTES } from '@constants/routes';
+import { ROUTES } from '@constants/routes';
 import Loading from '@components/Loading';
+import Navbar from '@components/Navbar';
+import Footer from '@components/Footer';
 
 const Home = lazy(() => import('./Home'));
 const HowItWorks = lazy(() => import('./HowItWorks'));
@@ -13,15 +15,7 @@ function App() {
     <Suspense fallback={<Loading />}>
       <Router>
         <>
-          <nav>
-            <ul>
-              {NAVBAR_ROUTES.map((el) => (
-                <li key={el.route}>
-                  <Link to={el.route}>{el.text}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Navbar />
           <Switch>
             <Route path={ROUTES.HOME} exact>
               <Home />
@@ -33,6 +27,7 @@ function App() {
               <PastTrials />
             </Route>
           </Switch>
+          <Footer />
         </>
       </Router>
     </Suspense>

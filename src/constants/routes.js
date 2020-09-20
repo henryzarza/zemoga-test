@@ -6,15 +6,11 @@ export const ROUTES = {
 
 export const NAVBAR_ROUTES = [
   {
-    route: ROUTES.HOME,
-    text: 'Home'
+    route: ROUTES.PAST_TRIALS,
+    text: 'PAST_TRIALS:NAV'
   },
   {
     route: ROUTES.HOW_IT_WORKS,
-    text: 'how-it-works'
-  },
-  {
-    route: ROUTES.PAST_TRIALS,
-    text: 'past-trials'
+    text: 'HOW_IT_WORKS:NAV'
   }
 ];
