@@ -7,8 +7,8 @@
 
 .title {
   color: $cod-gray;
-  font-weight: 700;
-  @include base-text(2.5rem, 1);
+  font-weight: 400;
+  @include base-text(3.75rem, 3.75rem);
 }
 
 .small-title {
@@ -17,22 +17,27 @@
   @include base-text(2rem, 2.375rem);
 }
 
-.subtitle {
-  color: $cod-gray;
-  font-weight: 700;
-  @include base-text(1.5rem, 1.17);
-}
-
 .big-text {
   color: $cod-gray;
   font-weight: 400;
-  @include base-text(1.2rem, 1.15);
+  @include base-text(1.3125rem, 1.5rem);
+}
+
+.big-bold-text {
+  color: $cod-gray;
+  font-weight: 700;
+  @include base-text(1.25rem, 1.5rem);
 }
 
 .base-text {
   color: $cod-gray;
   font-weight: 400;
   @include base-text(1rem, 1.1875rem);
+}
+
+.medium-text {
+  font-weight: 300;
+  @include base-text(0.875rem, 1.5rem);
 }
 
 .small-text {
@@ -43,6 +48,10 @@
 
 .fw-bold {
   font-weight: 700;
+}
+
+.fw-normal {
+  font-weight: 400;
 }
 
 .fw-thin {

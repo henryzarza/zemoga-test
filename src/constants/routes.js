@@ -14,3 +14,5 @@ export const NAVBAR_ROUTES = [
     text: 'HOW_IT_WORKS:NAV'
   }
 ];
+
+export const BACKEND_URL = 'https://private-721d9-zemogatest.apiary-mock.com/';
