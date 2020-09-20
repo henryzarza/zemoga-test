@@ -1,0 +1,58 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.container {
+  margin-bottom: 1.25rem;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  background-color: rgba($gallery, 0.67);
+  border-bottom: 0.15rem solid transparent;
+  padding: 1.2rem 0.6rem 0.8rem;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: $white;
+  }
+
+  &:-ms-input-placeholder {
+    color: $white;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+
+  + label {
+    left: 0;
+    padding-left: 0.6rem;
+    pointer-events: none;
+    position: absolute;
+    top: 1rem;
+    transform-origin: left 0;
+    transition: transform $transition-duration $transition-function;
+    user-select: none;
+    width: 100%;
+  }
+
+  &:focus,
+  &.filled {
+    border-bottom-color: $java;
+
+    & + label {
+      color: $java;
+      transform: translateY(-1rem) scale(0.9);
+    }
+  }
+
+  &.input-error {
+    border-color: $red;
+  }
+}
+
+.error {
+  background-color: $red;
+  padding: 0.25rem 0.5rem;
+}
