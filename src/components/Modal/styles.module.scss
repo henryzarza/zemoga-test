@@ -1,0 +1,55 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.content {
+  animation: fadeInDown $transition-duration $transition-function backwards;
+  background-color: rgba($black, 0.75);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 3rem 0;
+  width: $content-width;
+}
+
+.close-btn {
+  align-self: flex-end;
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg path {
+      fill: $java;
+    }
+  }
+
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+
+    path {
+      fill: $white;
+      transition: fill $transition-duration $transition-function;
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

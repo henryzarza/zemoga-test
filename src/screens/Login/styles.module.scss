@@ -1,0 +1,47 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.container {
+  margin: 2rem auto 0;
+  max-width: 100%;
+  width: 27.5rem;
+}
+
+.buttons-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  align-items: center;
+  background-color: rgba($black, 0.15);
+  border: 0.15rem solid $white;
+  display: flex;
+  height: 3.75rem;
+  justify-content: center;
+  max-width: 100%;
+  transition: background-color $transition-duration $transition-function;
+  width: 13rem;
+
+  &:hover {
+    background-color: $java;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  transition: color $transition-duration $transition-function;
+
+  &:hover {
+    color: $java;
+  }
+}
+
+.info {
+  align-items: center;
+  background-color: $gallery;
+  display: flex;
+  height: 4.25rem;
+  justify-content: center;
+}

@@ -1,7 +1,8 @@
 export const ROUTES = {
   HOME: '/',
   HOW_IT_WORKS: '/how-it-works',
-  PAST_TRIALS: '/past-trials'
+  PAST_TRIALS: '/past-trials',
+  SIGN_UP: '/sign-up'
 };
 
 export const NAVBAR_ROUTES = [
