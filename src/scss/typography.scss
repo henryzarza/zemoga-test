@@ -70,16 +70,16 @@
   @include base-text(0.75rem, 1.1875rem);
 }
 
-.fw-bold {
-  font-weight: 700;
+.fw-thin {
+  font-weight: 300;
 }
 
 .fw-normal {
   font-weight: 400;
 }
 
-.fw-thin {
-  font-weight: 300;
+.fw-bold {
+  font-weight: 700;
 }
 
 .text-center {
@@ -91,20 +91,35 @@
 }
 
 @media screen and (max-width: 40rem) {
-  // TODO add responsive for all fonts
   .title {
-    @include base-text(2.2rem, 1);
+    @include base-text(3.2rem, 1.2);
   }
 
   .small-title {
     @include base-text(1.6rem, 1.17);
   }
 
-  .subtitle {
-    @include base-text(1.2rem, 1.17);
-  }
-
   .big-text {
     @include base-text(1.1rem, 1.15);
+  }
+
+  .highlight-title {
+    @include base-text(2.125rem, 1.3);
+  }
+
+  .medium-title {
+    @include base-text(2rem, 1.2);
+  }
+
+  .medium-bold-title {
+    @include base-text(1.85rem, 1.25);
+  }
+
+  .big-thin-text {
+    @include base-text(1.35rem, 1.3);
+  }
+
+  .big-bold-text {
+    @include base-text(1.1rem, 1.1);
   }
 }

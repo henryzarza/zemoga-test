@@ -1,0 +1,33 @@
+@import 'src/scss/variables';
+@import 'src/scss/colors';
+
+.main {
+  background: $white url('../../assets/crowd-1.png') 100% / cover no-repeat;
+  display: flex;
+  min-height: 100vh;
+  padding: 5rem 0 2rem;
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 3rem 0;
+  width: $content-width;
+}
+
+.inner-content {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+  width: $content-width;
+}
+
+.card {
+  backdrop-filter: blur(0.85rem);
+  background-color: rgba($black, 0.35);
+  max-width: 100%;
+  padding: 1.25rem 1.5rem;
+  width: 31.25rem;
+}
